@@ -9,3 +9,6 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "post"
+kramdown: 
+  syntax_highlighter_opts:
+    disable : true
