@@ -5,7 +5,7 @@ layout: default
 <body>
 
 <h1>Setup Notes</h1>
-<p>Working with ZFS and Solaris-like systems for fun and profit.</p>
+<p>Notes from working with ZFS and Solaris-like systems for fun and profit, by John Burwell.</p>
 
 <h2>Posts</h2>
 
