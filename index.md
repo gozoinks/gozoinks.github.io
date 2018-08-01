@@ -3,21 +3,12 @@ layout: default
 ---
 
 <body>
-  <div class="index-wrapper">
-    <div class="aside">
-      <div class="info-card">
-        <h1>Setup Notes</h1>
-      </div>
-    </div>
-    <div class="index-content">
-      <ul class="article-list">
-        {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url }}" class="title">{{ post.title }}</a>
-          <div class="title-desc">{{ post.description }}</div>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
+
+<h1>Setup Notes</h1>
+<p>Working with ZFS and Solaris-like systems for fun and profit.</p>
+
+<ul>{% for post in site.posts %}
+<li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+</ul>
+
 </body>

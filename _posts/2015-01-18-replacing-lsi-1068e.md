@@ -3,6 +3,7 @@ title: LSI 1068E stuck at 2TB. Replacing.
 slug: replacing-lsi-1068e
 date_published: 2015-01-18T20:24:09.488Z
 date_updated:   2015-01-18T21:44:25.064Z
+layout: post
 ---
 
 Last night, I discovered that the LSISAS1068E controller in my server under-reports the capacity of my 3-terabyte drives. Apparently, 2TB is the largest capacity it supports. 
