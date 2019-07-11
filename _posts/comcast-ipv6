@@ -1,0 +1,13 @@
+---
+layout: post
+title: Comcast Business delegates IPv6 /59s
+date: 2019-07-10 10:52 -0500
+draft: true
+---
+My Comcast Business gateway delegates a /59 prefix, not a /60 as I gathered from what little documentation I could find. 
+
+With dhcp6c configured to expect a /60, it would configure LAN interfaces with an off-by-one prefix length of /63 instead of /64. This prevented SLAAC from working, caused routing issues, and created other various mayhem. Only by examining the dhcp6c debug logs in detail did I find where the prefix length given to my firewall by the Comcast gateway was 59.
+
+So, here's what I've learned:
+
+When configuring a firewall with Comcast Business IPv6, check the dhcp6c debug logs for an indication of the prefix length you are actually being delegated. Then go back and configure your dhcp6c client to request that same prefix length.
